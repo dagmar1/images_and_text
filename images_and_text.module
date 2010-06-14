@@ -1,0 +1,3 @@
+<?php
+
+include_once('images_and_text.features.inc');
