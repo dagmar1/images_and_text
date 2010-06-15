@@ -10,7 +10,11 @@ function _images_and_text_input_formats_default() {
   $input_format =   array(
     'name' => 'Images and Text',
     'machine_name' => 'images_and_text',
-    'roles' => array(),
+    'roles' => array(
+      12 => 'administrator',
+      13 => 'moderator',
+      14 => 'editor'
+    ),
   
     'order' => array(
       'filter' => array(
