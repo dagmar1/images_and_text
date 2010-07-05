@@ -67,7 +67,7 @@ function _images_and_text_input_formats_default() {
         div[align<center?justify?left?right],
         p[align<center?justify?left?right],
         img[*],
-        br,span,em,strong,code,blockquote,ul,ol,li,dl,dt,dd, table, td, tr, th, h1, h2, h3, h4. h5, h6',
+        br,span,em,strong,code,blockquote,ul,ol,li,dl,dt,dd, table, td, tr, th, h1, h2, h3, h4, h5, h6',
         // Color and background properties
         'wysiwyg_filter_styles_color' => array(
                 'color' => 'color',
