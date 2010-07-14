@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Helper to implementation of hook_wysiwyg_defaults().
+ * Implementation of hook_wysiwyg_defaults().
  */
-function _images_and_text_wysiwyg_defaults() {
+function images_and_text_wysiwyg_defaults() {
   $export = array();
   $wysiwyg = new stdClass;
   $wysiwyg->disabled = FALSE; /* Edit this to true to make a default wysiwyg disabled initially */
@@ -23,10 +23,13 @@ function _images_and_text_wysiwyg_defaults() {
         'underline' => 1,
         'justifyleft' => 1,
         'justifycenter' => 1,
+        'justifyright' => 1,
         'justifyfull' => 1,
         'bullist' => 1,
+        'numlist' => 1,
         'image' => 1,
         'forecolor' => 1,
+        'removeformat' => 1,
       ),
       'font' => array(
         'fontsizeselect' => 1,

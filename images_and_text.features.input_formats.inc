@@ -1,20 +1,16 @@
 <?php
 
 /**
- * Helper to implementation of hook_input_formats_default().
+ * Implementation of hook_input_formats_default().
  */
-function _images_and_text_input_formats_default() {
+function images_and_text_input_formats_default() {
   $input_formats = array();
 
   // Exported input format: images_and_text
   $input_format =   array(
     'name' => 'Images and Text',
     'machine_name' => 'images_and_text',
-    'roles' => array(
-      12 => 'administrator',
-      13 => 'moderator',
-      14 => 'editor'
-    ),
+    'roles' => array(),
   
     'order' => array(
       'filter' => array(
@@ -23,15 +19,15 @@ function _images_and_text_input_formats_default() {
         // (Delta => Order) for: Line break converter
         '1' => '-9',
         // (Delta => Order) for: HTML corrector
-        '3' => '-6',
+        '3' => '-8',
       ),
       'image_resize_filter' => array(
         // (Delta => Order) for: Image resize filter
-        '0' => '-8',
+        '0' => '-7',
       ),
       'wysiwyg_filter' => array(
         // (Delta => Order) for: WYSIWYG Filter
-        '0' => '-7',
+        '0' => '-6',
       ),
       'video_filter' => array(
         // (Delta => Order) for: Video Filter
@@ -68,6 +64,8 @@ function _images_and_text_input_formats_default() {
         p[align<center?justify?left?right],
         img[*],
         br,span,em,strong,code,blockquote,ul,ol,li,dl,dt,dd, table, td, tr, th, h1, h2, h3, h4, h5, h6',
+        // HTML comments
+        'wysiwyg_filter_allow_comments' => '0',
         // Color and background properties
         'wysiwyg_filter_styles_color' => array(
                 'color' => 'color',
